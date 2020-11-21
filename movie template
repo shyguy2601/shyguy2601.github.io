@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="t1" class="player-title-bar text-center" style="display: block;"></div>
+<div>
+<video controls autoplay name="media">
+    <source src="" type="video/mp4">
+    </video>
+</div>
+
+</body>
+</html>
+
+<div class="movie">
+<blockquote><a class="movie" href=" " target="_blank"><h4 style="color: white;"> </h4></blockquote>
+<img src=" " width="100px;">
+</a>
+</div>
