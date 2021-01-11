@@ -269,6 +269,31 @@ body {
     cursor: url('https://cdn.discordapp.com/attachments/746436559276081214/798203348901691412/output-onlinepngtools.png'), auto;
     
   }
+  .wavy {
+    position: relative;
+    -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
+  }
+  .wavy span {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    animation: animatewave 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i))
+  }
+  @keyframes animatewave {
+    0%
+    { 
+      transform: translateY(0px)
+    }
+    20%
+    { 
+      transform: translateY(-20px)
+    }
+    40%,100%
+    { 
+      transform: translateY(0px)
+    }
+  }
 /*.title:hover{
     margin: 0 0 0.5em;
     text-transform: uppercase;
