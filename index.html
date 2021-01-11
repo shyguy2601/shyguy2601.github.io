@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.typekit.net/qhm8wqj.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <section>
+      <div class="content">
+        <h1 class="title">
+          <span>V</span>
+          <span>i</span>
+          <span>b</span>
+          <span>e</span>
+          <span>M</span>
+          <span>a</span>
+          <span>s</span>
+          <span>t</span>
+          <span>e</span>
+          <span>r</span>
+          </h1>
+        <a class="fancy-link" href="#">Cool link effect</a>
+        and even with <a class="fancy-link" href="#">which works with short ones</a> too.
+      </div>
+  
+      <div class="content content--buttons">
+        <button class="button button-one">Button 1</button>
+        <button class="button button-two">Button 2</button>
+        <button class="button button-three">Button 3</button>
+      </div>
+  
+      <div style="margin-bottom: 100vh;" class="content content--card">
+        <div class="card">
+          <h3 class="card__title">Card Title</h3>
+          <p class="card__body">Card body</p>
+        </div>
+      </div>
+
+
+    </section>
+    <script type="text/javascript">
+    let progress = document.getElementById('progressbar'
+    );
+    let totalHeight = document.body.scrollHeight -
+      window.innerHeight;
+      window.onscroll = function(){
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+      }
+      </script>
+  </body>
+</html>
