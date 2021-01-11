@@ -245,7 +245,7 @@ body {
 }
 
 .content {
-  background: white;
+  background: rgb(44, 43, 43);
   width: 70vw;
   padding: 3em;
   box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
