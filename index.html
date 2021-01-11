@@ -34,7 +34,12 @@
         <button class="button button-two">Button 2</button>
         <button class="button button-three">Button 3</button>
       </div>
-  
+      <div class="followface">
+        <div class="box">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+      </div>
       <div style="margin-bottom: 100vh;" class="content content--card">
         <div class="card">
           <h3 class="card__title">Card Title</h3>
@@ -42,6 +47,7 @@
         </div>
       </div>
 
+     
 
     </section>
     <script type="text/javascript">
@@ -53,6 +59,21 @@
         let progressHeight = (window.pageYOffset / totalHeight) * 100;
         progress.style.height = progressHeight + "%";
       }
+         function eyeball(){
+        const eye = document.querySelectorAll('.eye');
+        eye.forEach(function(eye){
+          let x = (eye.getBoundingClientRect().left) * (eye.clientWidth / 2);
+          let y = (eye.getBoundingClientRect().top) * (eye.clientHeight / 2);
+
+          let radian = Math.atan2(event.pageX - x, event.pageY -y);
+          let rotation = (radian * (180 / Math.PI) * -1) + 270;
+          eye.style.transform = "rotate("+rotation+"deg)"
+
+        });
+      }
+      document.querySelector('followface').addEventListener('mousemove', eyeball);
+
+   
       </script>
   </body>
 </html>
