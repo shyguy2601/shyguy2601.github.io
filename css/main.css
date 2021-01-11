@@ -3,6 +3,64 @@
 *::after {
   box-sizing: border-box;
 }
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.nav__links {
+  position: center;
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #0088a9;
+}
+
+.cta {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+
+.nav_bar
+{
+ 
+  width: 100%;
+  background: #444; 
+  background-size: 400%;
+  animation: glowinganimate 8s linear infinite;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b,#03a9f4);
+}
 
 ::-webkit-scrollbar {
     width: 0;
@@ -251,6 +309,7 @@ body {
   box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
   text-align: center;
   margin-bottom: 1em;
+  margin-top: 100px;
 }
 .glowingbutton
 {
@@ -275,6 +334,7 @@ body {
   background-size: 400%;
   border-radius: 30px
 }
+
 .glowingbutton:hover
 {
   animation: glowinganimate 8s linear infinite;
@@ -345,7 +405,7 @@ body {
     }
   }
   
-
+  
 /*.title:hover{
     margin: 0 0 0.5em;
     text-transform: uppercase;
