@@ -331,6 +331,9 @@ body {
 .rocketcontainer
 {
 padding: 10px;
+padding-top: 20px;
+width: 100px;
+height: 150px;
 top: 50px;
 right: 450px;
 position: relative;
@@ -352,9 +355,24 @@ position: relative;
       transform: translateY(0);
       translate: rotate(2deg);
     }
- 
-    
-  
+  }
+
+.text
+{
+  visibility: hidden;
+}
+.rocketcontainer:hover .text
+{
+  visibility: visible;
+  color: white;
+  font-size: small;
+}
+.rocketinstruction
+{
+  color: coral;
+  padding: 20px;
+  position: relative;
+  right: 300px
 }
 .content {
   background: rgb(44, 43, 43);
