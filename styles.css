@@ -156,7 +156,7 @@ li, a, button {
     justify-content: left;
     height: 80px;
     margin: 0;
-    background: rgb(29, 28, 28);
+    background: none;
     position: absolute;
     left: 0;
     top: 675px;
@@ -164,9 +164,4 @@ li, a, button {
     width: 100%;
     text-align: center;
     z-index: 1;
-}
-.footer-text
-{
-    z-index: 1;
-    color: rgb(100, 95, 95);
 }
