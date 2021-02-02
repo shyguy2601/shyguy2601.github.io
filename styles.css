@@ -154,13 +154,12 @@ li, a, button {
 {
     display: flex;
     justify-content: left;
-    padding: 5px;
-    height: 60px;
+    height: 80px;
     margin: 0;
     background: rgb(29, 28, 28);
     position: absolute;
     left: 0;
-    top: 720px;
+    top: 675px;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -168,5 +167,6 @@ li, a, button {
 }
 .footer-text
 {
+    z-index: 1;
     color: rgb(100, 95, 95);
 }
