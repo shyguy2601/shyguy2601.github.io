@@ -153,12 +153,14 @@ li, a, button {
 .pagefooter
 {
     display: flex;
-    height: 50px;
+    justify-content: left;
+    padding: 5px;
+    height: 60px;
     margin: 0;
     background: rgb(29, 28, 28);
     position: absolute;
     left: 0;
-    top: 710px;
+    top: 720px;
     bottom: 0;
     width: 100%;
     text-align: center;
