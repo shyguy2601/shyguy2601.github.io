@@ -25,14 +25,17 @@ body
 
 .circle span
 {
+  
     position: absolute;
     display: block;
     border-radius: 50%;
     overflow: hidden;
     background: #222;
-    animation: animate 5s cubic-bezier(.64,-.56,.36,1.56) infinite;
+    animation: animate 5s cubic-bezier(.64,-.56,.36,1.56);
+    animation-iteration-count: 1;
     z-index: -1;
-}
+  }
+  
 @keyframes animate
 {
     0%
@@ -165,3 +168,222 @@ li, a, button {
     text-align: center;
     z-index: 1;
 }
+
+.loader_bg
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999999;
+    background: #000;
+    width: 100%;
+    height: 100%;
+}
+h2
+{
+    color: #000;
+    font-size: 6em;
+    display: flex;
+
+}
+h2 span 
+{
+    animation: loading 4s linear infinite;
+}
+h2 span:nth-child(1)
+{
+    animation-delay: 0s;
+}
+h2 span:nth-child(2)
+{
+    animation-delay: 0.1s;
+}
+h2 span:nth-child(3)
+{
+    animation-delay: 0.2s;
+}
+h2 span:nth-child(4)
+{
+    animation-delay: 0.3s;
+}
+h2 span:nth-child(5)
+{
+    animation-delay: 0.4s;
+}
+h2 span:nth-child(6)
+{
+    animation-delay: 0.5s;
+}
+h2 span:nth-child(7)
+{
+    animation-delay: 0.6s;
+}
+h2 span:nth-child(8)
+{
+    animation-delay: 0.7s;
+}
+@keyframes loading 
+{
+    0%,100%
+    {
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff,
+                     0 0 20px #00b3ff,
+                     0 0 40px #00b3ff,
+                     0 0 80px #00b3ff,
+                     0 0 120px #00b3ff,
+                     0 0 200px #00b3ff,
+                     0 0 300px #00b3ff,
+                     0 0 400px #00b3ff;
+
+    }
+    25%,75%
+    {
+        color: #000;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
+.home-loader 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    background: #000;
+}
+.home-loader .face
+{
+    position: absolute;
+    border: 2px solid #121212;
+}
+.home-loader .face.face1
+{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #090909;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    border-radius: 50%;
+    border-left: 2px solid #ffff00;
+    border-top: 2px solid #ffff00;
+    animation: homeloading 3s linear infinite;
+}
+.home-loader .face.face2
+{
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    background: #090909;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    border-radius: 50%;
+    border-right: 2px solid #03a9f4;
+    border-bottom: 2px solid #03a9f4;
+    animation: homeloading 3s linear reverse infinite;
+}
+
+.home-loader .face .loadingcircle
+{
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    transform-origin: left;
+}
+.home-loader .face.face1 .loadingcircle
+{
+    transform: rotate(-45deg);
+}
+.home-loader .face.face2 .loadingcircle
+{
+    transform: rotate(-45deg);
+}
+.home-loader .face .loadingcircle:before
+{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    top: -4px;
+    right: -6px;
+}
+.home-loader .face.face1 .loadingcircle:before
+{
+    background: #ffff00;
+    box-shadow: 0 0 20px #ff0,
+                0 0 40px #ff0,
+                0 0 60px #ff0,
+                0 0 80px #ff0,
+                0 0 100px #ff0,
+                0 0 0 5px rgba(255,255,0,.1);
+}
+.home-loader .face.face2 .loadingcircle:before
+{
+    background: #03a9f4;
+    box-shadow: 0 0 20px #03a9f4,
+                0 0 40px #03a9f4,
+                0 0 60px #03a9f4,
+                0 0 80px #03a9f4,
+                0 0 100px #03a9f4,
+                0 0 0 5px rgba(3,169,244,.1);
+}
+@keyframes homeloading
+{
+ 0%
+ {
+     transform: rotate(0deg);
+ }
+ 100%
+ {
+     transform: rotate(360deg);
+ }      
+}
+
+.title{
+    display: flex;
+    bottom: 200px;
+    margin: 0 0 0.5em;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 3rem;
+    color: #c9bebd;
+    line-height: 0.8;
+    letter-spacing: 0;
+   
+  }
+  .wavy {
+    position: relative;
+    -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0,0,0,0.2));
+  }
+  .wavy span {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    animation: animatewave 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i))
+  }
+  @keyframes animatewave {
+    0%
+    { 
+      transform: translateY(0px)
+    }
+    20%
+    { 
+      transform: translateY(-20px)
+    }
+    40%,100%
+    { 
+      transform: translateY(0px)
+    }
+  }
