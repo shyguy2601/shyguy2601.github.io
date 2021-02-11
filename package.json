@@ -1,0 +1,27 @@
+{
+  "name": "shyguy2601.github.io",
+  "version": "1.0.0",
+  "description": "https://shyguy2601.github.io/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/app.js",
+    "start": "node ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shyguy2601/shyguy2601.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shyguy2601/shyguy2601.github.io/issues"
+  },
+  "homepage": "https://github.com/shyguy2601/shyguy2601.github.io#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.11.15",
+    "passport": "^0.4.1",
+    "passport-discord": "^0.1.4"
+  }
+}
